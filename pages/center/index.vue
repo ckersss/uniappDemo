@@ -11,8 +11,19 @@
 				title: 'Hello'
 			}
 		},
-		onLoad() {
-
+		onLoad() {	
+		/* const token = this.vuex_token
+		if(!token) {
+			this.$u.toast('请先登录！')
+			setTimeout(()=>{
+				this.$u.route({
+					type:'redirectTo',
+					url:'pages/user/login'
+				})
+			},1000)
+		} */
+		if(!this.$u.utils.isLogin())  return
+		console.log(12321)
 		},
 		methods: {
 

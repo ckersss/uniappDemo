@@ -15,7 +15,43 @@
 				"navigationBarTitleText": "个人中心"
 			}
 		}
-	],
+	    ,{
+            "path" : "pages/goods/goods",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "商品",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/cart/cart",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "购物车",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/login",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "登录页面",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		,{
+            "path" : "pages/user/register",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "注册页面",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uView",
@@ -29,13 +65,23 @@
 	    "backgroundColor": "#ffffff",
 	    "list": [{
 	        "pagePath": "pages/index/index",
-	        "iconPath": "static/index.png",
-	        "selectedIconPath": "static/index-selected.png",
+	        "iconPath": "static/icon/home.png",
+	        "selectedIconPath": "static/icon/home (1).png",
 	        "text": "首页"
+	    },{
+	        "pagePath": "pages/goods/goods",
+	        "iconPath": "static/icon/order.png",
+	        "selectedIconPath": "static/icon/order (1).png",
+	        "text": "商品"
+	    },{
+	        "pagePath": "pages/cart/cart",
+	        "iconPath": "static/icon/cart_empty.png",
+	        "selectedIconPath": "static/icon/cart_empty (1).png",
+	        "text": "购物车"
 	    }, {
 	        "pagePath": "pages/center/index",
-	        "iconPath": "static/center.png",
-	        "selectedIconPath": "static/center-selected.png",
+	        "iconPath": "static/icon/user.png",
+	        "selectedIconPath": "static/icon/user (1).png",
 	        "text": "我"
 	    }]
 	}
