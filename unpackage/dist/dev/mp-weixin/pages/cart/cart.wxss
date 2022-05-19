@@ -1,0 +1,140 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+.container {
+  margin: 40rpx 40rpx 0rpx 40rpx;
+}
+.cartContainer {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 200rpx;
+}
+.cartContainer .cartItem {
+  width: 100%;
+  height: 240rpx;
+  background-color: #fafafa;
+}
+.cartContainer .cartItem .checkbox {
+  width: 70rpx;
+  height: 100%;
+  background-color: white;
+  flex-direction: column;
+  justify-content: center;
+}
+.cartContainer .cartItem .cart_goods {
+  width: calc(100% - 70rpx);
+  height: 100%;
+  padding: 20rpx 30rpx;
+  display: flex;
+}
+.cartContainer .cartItem .cart_goods .goods_img {
+  width: 240rpx;
+  height: 220rpx;
+}
+.cartContainer .cartItem .cart_goods .goods_info {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+.cartContainer .cartItem .cart_goods .goods_info .goods_title {
+  font-size: 30rpx;
+  width: 100%;
+  height: 50rpx;
+}
+.cartContainer .cartItem .cart_goods .goods_info .goods_classify {
+  font-size: 25rpx;
+  color: gray;
+  width: 100%;
+  height: 50rpx;
+}
+.cartContainer .cartItem .cart_goods .goods_info .goods_chooseNum {
+  display: flex;
+  margin-top: 80rpx;
+  width: 100%;
+  height: 60rpx;
+}
+.cartContainer .cartItem .cart_goods .goods_info .goods_chooseNum .price {
+  flex: 1;
+  font-size: 20rpx;
+  line-height: 60rpx;
+  font-weight: 700;
+  color: red;
+}
+.cartContainer .cartItem .cart_goods .goods_info .goods_chooseNum .subtract {
+  margin-left: 10rpx;
+  font-size: 40rpx;
+}
+.cartContainer .cartItem .cart_goods .goods_info .goods_chooseNum .no_subtract {
+  background-color: #f7f7f7;
+  color: #cccccc;
+}
+.cartContainer .cartItem .cart_goods .goods_info .goods_chooseNum .goods_num {
+  font-size: 30rpx;
+}
+.cartContainer .cartItem .cart_goods .goods_info .goods_chooseNum .add {
+  font-size: 40rpx;
+}
+.cartContainer .cartItem .cart_goods .goods_info .goods_chooseNum .remove {
+  margin-left: 10rpx;
+  padding-top: 5rpx;
+}
+.cartContainer .not_chooseBox {
+  width: 70rpx;
+  height: 70rpx;
+}
+.cartContainer .not_chooseBox .not_chooseBtn {
+  width: 40rpx;
+  height: 40rpx;
+  background-color: #fff;
+  border: 4rpx solid gray;
+  border-radius: 50%;
+}
+.cartContainer .chooseBox {
+  width: 70rpx;
+  height: 70rpx;
+}
+.cartContainer .chooseBox .chooseBtn {
+  width: 40rpx;
+  height: 40rpx;
+  background-color: #2979ff;
+  border: 4rpx solid #2979ff;
+  border-radius: 50%;
+}
+.cartContainer .goods_choose_class {
+  width: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+.cartContainer .goods_choose_btn {
+  background-color: #eeeeee;
+  margin: 0 3rpx;
+}
+.cartContainer .balance {
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  z-index: 9;
+  align-items: center;
+  justify-content: space-between;
+}
+.cartContainer .balance .total {
+  margin-left: 60rpx;
+  width: 250rpx;
+  line-height: 80rpx;
+}
+.cartContainer .balance .total .total_price {
+  display: inline;
+  color: red;
+  font-weight: 900;
+}
+.cartContainer .balance .btn-style {
+  margin-right: 50rpx;
+  width: 200rpx;
+}
+

@@ -14,6 +14,12 @@
 			"style": {
 				"navigationBarTitleText": "个人中心"
 			}
+		},
+		{
+			"path": "pages/center/baseInfo",
+			"style": {
+				"navigationBarTitleText": "修改个人信息"
+			}
 		}
 	    ,{
             "path" : "pages/goods/goods",
@@ -51,6 +57,43 @@
             }
             
         }
+        ,{
+            "path" : "pages/showGoods/showGoods",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/orders/orders",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "订单预览",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/address/address",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "收货地址",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        
+        ,{
+            "path" : "pages/addressMgt/addressMgt",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "地址管理",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -59,6 +102,7 @@
 		"backgroundColor": "#F8F8F8"
 	},
 	"tabBar": {
+		"height": "100rpx",
 	    "color": "#909399",
 	    "selectedColor": "#303133",
 	    "borderStyle": "black",

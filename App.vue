@@ -13,6 +13,7 @@
 </script>
 
 <style lang="scss">
+	@import './static/iconfont.css';
 	@import "uview-ui/index.scss";
 	/*每个页面公共css */
 </style>

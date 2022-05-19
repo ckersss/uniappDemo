@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "地址管理",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "u-form": "/uview-ui/components/u-form/u-form",
+    "u-form-item": "/uview-ui/components/u-form-item/u-form-item",
+    "u-input": "/uview-ui/components/u-input/u-input",
+    "u-switch": "/uview-ui/components/u-switch/u-switch",
+    "u-button": "/uview-ui/components/u-button/u-button",
+    "city-select": "/pages/addressMgt/u-city-select"
+  }
+}

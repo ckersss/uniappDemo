@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "u-image": "/uview-ui/components/u-image/u-image",
+    "u-tabs": "/uview-ui/components/u-tabs/u-tabs",
+    "goods-info": "/components/goodsInfo/goodsInfo",
+    "comment": "/components/comment/comment",
+    "recommend": "/components/recommend/recommend",
+    "submit-bar": "/components/submitBar/submitBar",
+    "u-skeleton": "/uview-ui/components/u-skeleton/u-skeleton"
+  }
+}

@@ -1,5 +1,5 @@
 <template>
-	<navigator url="" class="goods_item">
+	<navigator :url="'/pages/showGoods/showGoods?id=' + item.id" class="goods_item">
 		<u-image width="100%" height="300rpx" class='u-skeleton-rect'
 			:src="item.cover_url"></u-image>
 			<view class="title u-line-1">
