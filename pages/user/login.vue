@@ -117,25 +117,30 @@
 		},
 		
 		methods: {
-			 submit() {
-				// const _self = this;
-				 this.$refs.validateFormRef.validate(async valid => {
+			 submit(query) {
+				 console.log(query)
+				const _self = this;
+				 _self.$refs.validateFormRef.validate(async valid => {
 					if (valid) {
-						const {username,password} = this.validateForm.value
-						console.log('验证通过', this.validateForm.value);
+						const {username,password} = _self.validateForm.value
+						console.log('验证通过', _self.validateForm.value);
 						const params = {
 							email: username,
 							password: password
 						}
 						console.log(params)
-						const loginRes = await this.$u.api.authLogin(params)
-						this.$u.vuex('vuex_token',loginRes.access_token)
-						const userInfo = await this.$u.api.userInfo()
+						const loginRes = await _self.$u.api.authLogin(params)
+						_self.$u.vuex('vuex_token',loginRes.access_token)
 						//缓存用户信息
-						this.$u.vuex('vuex_user',userInfo)
-						console.log(this.$route.query.last_url)
-						const url = this.$route.query.last_url || 'pages/index/index'
-						this.$u.route({
+						await _self.$u.utils.updateUser()
+						let url = ''
+						if (_self.$mp) {
+							url =  _self.$mp.query.last_url || 'pages/index/index'
+						} else {
+							url = _self.$route.query.last_url || 'pages/index/index'
+						}
+						// const url = _self.$route.query.last_url || 'pages/index/index'
+						_self.$u.route({
 							type:'reLaunch',
 							url
 						})
