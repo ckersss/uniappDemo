@@ -22,7 +22,7 @@
 		},
 		methods: {
 			//图片上传前钩子
-			async beforeUpload(index, lists) {
+			beforeUpload(index, lists) {
 				//先获取osstoken
 				//获取上传域名
 				//将文件名处理为唯一文件名 [list] 上传文件信息数组	
@@ -36,21 +36,25 @@
 				const fileName = file.path
 				//#endif
 				//获取后缀名
-				const ossToken = await _this.$u.api.authOssToken()
-				const suffix = fileName.slice(fileName.lastIndexOf('.'))	
-				//通过内置方法生成唯一文件名
-				const upFileName = _this.$u.guid(20) + suffix
-				_this.updateAvatarKey = upFileName	
-				_this.formData = {
-					'key':upFileName,
-					'policy':ossToken.policy,
-					'OSSAccessKeyId':ossToken.accessid,
-					'success_action_status' : '200', //让服务端返回200,不然，默认会返回204
-					'signature':ossToken.signature,
-				}
-				console.log(_this.formData)
-				_this.action = ossToken.host
-				return true
+				return _this.$u.api.authOssToken().then(
+				(ossToken) =>{
+					const suffix = fileName.slice(fileName.lastIndexOf('.'))
+					//通过内置方法生成唯一文件名
+					const upFileName = _this.$u.guid(20) + suffix
+					_this.updateAvatarKey = upFileName	
+					console.log(upFileName)
+					_this.formData = {
+						'key':upFileName,
+						'policy':ossToken.policy,
+						'OSSAccessKeyId':ossToken.accessid,
+						'success_action_status' : '200', //让服务端返回200,不然，默认会返回204
+						'signature':ossToken.signature,
+					}
+					console.log(_this.formData)
+					_this.action = ossToken.host
+					 return true
+				   }  
+				)
 			},
 			//上传成功后的回调
 			async onSuccess() {
